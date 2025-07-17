@@ -1,0 +1,15 @@
+{
+  "id": "leave-approval",
+  "name": "Leave Approval Workflow",
+  "states": [
+    { "id": "draft", "name": "Draft", "isInitial": true },
+    { "id": "submitted", "name": "Submitted" },
+    { "id": "approved", "name": "Approved" },
+    { "id": "rejected", "name": "Rejected" }
+  ],
+  "actions": [
+    { "id": "submit", "name": "Submit", "fromState": "draft", "toState": "submitted" },
+    { "id": "approve", "name": "Approve", "fromState": "submitted", "toState": "approved" },
+    { "id": "reject", "name": "Reject", "fromState": "submitted", "toState": "rejected" }
+  ]
+}
